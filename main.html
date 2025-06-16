@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Naive Realism Experiment</title>
+    <!-- Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Custom styles for the app */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Style for the "unreadable" red text effect */
+        .unreadable-red {
+            color: #ef4444; /* A strong red color */
+            text-shadow: 0 0 16px #ef4444, 0 0 24px #ef4444, 0 0 32px #ef4444;
+            filter: blur(5px);
+            -webkit-filter: blur(5px);
+        }
+        /* Style for the active navigation link */
+        .nav-link.active {
+            background-color: #4f46e5; /* Indigo color */
+            color: #ffffff;
+        }
+        /* Smooth transition for iframe src change */
+        #content-frame {
+            transition: opacity 0.3s ease-in-out;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <div class="flex h-screen">
+        <!-- Sidebar Navigation -->
+        <aside class="w-64 flex-shrink-0 bg-white border-r border-gray-200 p-6 flex flex-col">
+            <!-- Title -->
+            <header class="mb-10">
+                <h1 class="text-2xl font-bold text-gray-900">
+                    The <span class="unreadable-red">Naive Realism</span> Experiment
+                </h1>
+            </header>
+
+            <!-- Navigation Links -->
+            <nav class="flex-grow">
+                <ul class="space-y-3" id="navigation-links">
+                    <li>
+                        <!-- Realism Icon (Eye) -->
+                        <a href="#" class="nav-link flex items-center p-3 rounded-lg text-gray-600 hover:bg-gray-200 transition-colors duration-200" data-src="kepler1.html">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3" viewBox="0 0 20 20" fill="currentColor">
+                                <path d="M10 12a2 2 0 100-4 2 2 0 000 4z" />
+                                <path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.022 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd" />
+                            </svg>
+                            <span>Kepler-1</span>
+                        </a>
+                    </li>
+                    <li>
+                        <!-- Abstract Icon (Cube) -->
+                        <a href="#" class="nav-link flex items-center p-3 rounded-lg text-gray-600 hover:bg-gray-200 transition-colors duration-200" data-src="kepler2.html">
+                           <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.03 5.134a.75.75 0 011.033.513l.755 2.517a.75.75 0 001.38-.413l-.33-1.1a.75.75 0 011.23-.76l4 6.5a.75.75 0 01-.93 1.134l-1.07-.669a.75.75 0 00-.917.067l-2.433 2.028a.75.75 0 01-.917.067l-1.07-.669a.75.75 0 01-.93-1.134l4-6.5a.75.75 0 01.197-.273zm-3.15 6.352a.75.75 0 011.033.513l.755 2.517a.75.75 0 001.38-.413l-.33-1.1a.75.75 0 011.23-.76l.243.399-2.09 3.4a.75.75 0 01-1.298-.79l.64-2.135a.75.75 0 00-1.38-.413l-.33 1.1a.75.75 0 01-1.23.76l-4-6.5a.75.75 0 01.93-1.134l1.07.669a.75.75 0 00.917-.067l2.433-2.028a.75.75 0 01.917-.067l1.07.669a.75.75 0 01.93 1.134l-4 6.5a.75.75 0 01-.197.273z" clip-rule="evenodd" />
+                            </svg>
+                            <span>Kepler-2</span>
+                        </a>
+                    </li>
+                    <li>
+                        <!-- Realism Icon (Eye) -->
+                        <a href="#" class="nav-link flex items-center p-3 rounded-lg text-gray-600 hover:bg-gray-200 transition-colors duration-200" data-src="kepler3.html">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3" viewBox="0 0 20 20" fill="currentColor">
+                                <path d="M10 12a2 2 0 100-4 2 2 0 000 4z" />
+                                <path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.022 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd" />
+                            </svg>
+                            <span>Kepler-3</span>
+                        </a>
+                    </li>
+                    <li>
+                        <!-- Abstract Icon (Cube) -->
+                        <a href="#" class="nav-link flex items-center p-3 rounded-lg text-gray-600 hover:bg-gray-200 transition-colors duration-200" data-src="kepler4.html">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3" viewBox="0 0 20 20" fill="currentColor">
+                                <path d="M10 3.5A1.5 1.5 0 0111.5 5v1.625a1.5 1.5 0 01-3 0V5A1.5 1.5 0 0110 3.5z" />
+                                <path d="M8.5 6.625a1.5 1.5 0 00-3 0V15a1.5 1.5 0 003 0V6.625z" />
+                                <path d="M14.5 6.625a1.5 1.5 0 00-3 0V15a1.5 1.5 0 003 0V6.625z" />
+                                <path fill-rule="evenodd" d="M4 1.5A2.5 2.5 0 001.5 4v12A2.5 2.5 0 004 18.5h12a2.5 2.5 0 002.5-2.5V4A2.5 2.5 0 0016 1.5H4zM3 4a1 1 0 011-1h12a1 1 0 011 1v12a1 1 0 01-1 1H4a1 1 0 01-1-1V4z" clip-rule="evenodd" />
+                            </svg>
+                            <span>Kepler-4</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Footer -->
+            <footer class="text-center text-xs text-gray-400">
+                <p>Dashboard v1.3</p>
+            </footer>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="flex-1 p-6 bg-gray-100">
+            <div id="frame-container" class="w-full h-full bg-white rounded-xl shadow-lg overflow-hidden border border-gray-200">
+                <iframe id="content-frame" class="w-full h-full border-none" src=""></iframe>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const links = document.querySelectorAll('.nav-link');
+            const contentFrame = document.getElementById('content-frame');
+
+            // Function to handle navigation
+            function navigate(e) {
+                e.preventDefault();
+                const link = e.currentTarget;
+                const src = link.getAttribute('data-src');
+
+                if (link.classList.contains('active')) {
+                    return;
+                }
+                
+                contentFrame.style.opacity = '0';
+                setTimeout(() => {
+                    // Load the local HTML file directly
+                    contentFrame.src = src; 
+                    contentFrame.onload = () => {
+                       contentFrame.style.opacity = '1';
+                    };
+                }, 150);
+                
+                links.forEach(l => l.classList.remove('active'));
+                link.classList.add('active');
+            }
+
+            links.forEach(link => {
+                link.addEventListener('click', navigate);
+            });
+
+            // Set the initial state
+            if (links.length > 0) {
+                const firstLink = links[0];
+                firstLink.classList.add('active');
+                const initialSrc = firstLink.getAttribute('data-src');
+                // Load the initial local HTML file directly
+                contentFrame.src = initialSrc;
+                contentFrame.onload = () => { contentFrame.style.opacity = '1'; };
+            }
+        });
+    </script>
+
+</body>
+</html>
